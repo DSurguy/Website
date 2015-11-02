@@ -1,8 +1,11 @@
-var express = require('express');
+var express = require('express'),
+	cookieParser = require('cookie-parser');
 var app = express();
+app.use(cookieParser());
+
 require('./routes')(app);
 
-var server = app.listen(3000, function () {
+var server = app.listen(3000, '192.168.50.110', function () {
 	var host = server.address().address,
 		port = server.address().port;
 

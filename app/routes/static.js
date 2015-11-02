@@ -16,6 +16,6 @@ module.exports = function(app){
 	//static page
 	app.get('/([a-zA-Z0-9]-?)+/?', function (req, res){
 		res.status(200).send(req.originalUrl);
-	})
+	});
 
 };
